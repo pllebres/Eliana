@@ -1,0 +1,238 @@
+/* Estilos generales */
+.header.navbar {
+  background-color: $brand-white !important;
+  z-index: 1;
+}
+
+.h1 {
+  color: $brand-red !important;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.navbar-brand img {
+  width: 10rem;
+}
+
+.bg-light {
+  background-color: $brand-white !important;
+  border-bottom: 1px solid $brand-black;
+}
+
+.text-light {
+  color: $brand-white;
+}
+
+#navbarNav {
+  justify-content: flex-end;
+}
+
+a.nav-link:hover,
+a.social__link:hover {
+  color: $brand-red;
+}
+
+ul {
+  padding-left: 1rem;
+}
+
+/* Estilos de la página  Blog */
+.Blog,
+.Blog__row,
+.Blog__row2, .concursants {
+  max-width: 1240px;
+  padding: 1rem;
+}
+
+.hero {
+  background-image: url('/src/assets/images/hero_blog.png');
+  background-position: center;
+  background-size: cover;
+  min-height: 40vh;
+}
+
+.concursants {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin: 0 auto; /* Centra el contenedor horizontalmente */
+}
+
+.item {
+  height: auto;
+  margin-bottom: 10px;
+  width: 30%; /* Cada columna ocupará el 30% del contenedor */
+}
+
+@media screen and (width <= 768px) {
+  .item {
+    width: 50%;
+  }
+}
+
+@media screen and (width <= 420px) {
+  .item {
+    width: 100%;
+  }
+}
+
+/* Estilos de botones */
+.btn-primary {
+  background: $brand-white;
+  border: 2px solid $brand-black;
+  box-shadow: 5px 5px $brand-black, inset 5px 5px $brand-white, inset 1px 1px $brand-black;
+  color: $brand-black;
+  font-family: -system-ui, sans-serif;
+  font-size: 1rem;
+  font-weight: bold;
+  padding: 1.1rem 1rem;
+  position: relative;
+  text-decoration: none;
+  transition: all 300ms;
+}
+
+.btn-primary a {
+  color: $brand-black;
+  text-decoration: none;
+}
+
+.btn-primary::after {
+  height: 5px;
+  left: 100%;
+  top: 5px;
+  width: 10px;
+}
+
+.btn-primary:hover {
+  box-shadow: 7px 7px $brand-black, inset 7px 7px $brand-white, inset 1px 1px $brand-black;
+  transform: translate(-4px, -2px); /* Desplazamiento hacia adelante */
+}
+
+button.btn-primary {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 20px; /* Agrega un margen inferior de 20px entre grupos */
+}
+
+/* Estilos de footer */
+.footer {
+  font-size: 0.75rem;
+  margin-top: 2rem;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.footer__container {
+  align-items: center;
+  display: grid;
+  justify-content: space-between;
+  padding: 2rem 4rem;
+  text-align: left;
+}
+
+.fa-brands {
+  color: $brand-white;
+}
+
+.fa-brands:hover {
+  color: $brand-red;
+}
+.footer__social {
+  color: $brand-white!important;
+  padding-top: 2rem;
+}
+@media screen and (width <= 768px) {
+  .footer__container {
+    padding: 2rem 0;
+  }
+}
+
+.form {
+  padding: 1.2rem;
+}
+
+.footer__left {
+  margin-bottom: 1rem;
+}
+
+.footer ul.footer__social.social {
+  display: flex;
+  gap: 1rem;
+}
+
+li.social__item {
+  font-size: 2em;
+  list-style-type: none;
+}
+
+.footer__right {
+  grid-column-start: 2;
+}
+
+@media screen and (width <= 768px) {
+  .footer__right {
+    grid-column-start: 1;
+  }
+}
+
+footer.footer.bg-black.text-white {
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+}
+
+.footer ul.navbar-nav {
+  display: inline-flex;
+  flex-direction: row;
+}
+
+li.nav-item {
+  padding-right: 3rem;
+}
+
+/* Otros estilos */
+.heading {
+  padding: 3rem;
+}
+
+.Blog__column,
+.custom-list-item {
+  margin: 5px;
+  padding: 1rem;
+}
+
+.Blog__column {
+  flex: 1;
+}
+
+.Blog__column--small {
+  flex: 0 0 30%; 
+}
+
+.custom-list {
+  border-bottom: solid 1px #000;
+  border-top: solid 1px #000;
+  display: flex;
+  flex-direction: column;
+}
+
+.custom-list-item {
+  border-radius: 5px;
+  margin-bottom: 5px;
+}
+
+.custom-list-item .rounded-circle {
+  border: 1px solid $brand-black;
+  color: $brand-black;
+  line-height: 30px;
+  margin-right: 10px;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  text-align: center;
+}
+
+.text {
+  padding-left: 2rem;
+}
