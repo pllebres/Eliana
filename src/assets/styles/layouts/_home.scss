@@ -19,7 +19,7 @@ body {
   background-color: $brand-black;
 }
 
-/* Estilos de CSS Grid */
+
 @supports (display: grid) {
   .container-fluid {
     border: 3px solid $brand-black;
@@ -179,23 +179,30 @@ body {
 
 
 
-@supports not (display: grid) {
+@supports not (display: grid) { 
   .container-fluid {
     max-width: 1380px;
     margin: 6rem auto 0;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
   }
+
+  .Foto__1, .Foto__2, .Foto__3 {
+    width: 18% !important;
+} 
+
 
   .Foto__2 img {
     width: 300px;
 }
 
+
   .fecha {
-    background-color: $brand-70black;
-    transform: rotate(-90deg);
+    width: 11%;
+    transform: rotate(90deg);
+    background-color: transparent;
     margin: 1rem 0 0 auto;
-  }
+}
 
   .titulo {
     color: $brand-white;
@@ -208,15 +215,19 @@ body {
   }
 
   .Premios {
-    transform: rotate(-90deg);
+    width: 142%;
     margin: auto 0 0 1rem;
   }
+
+  .Premios ul {
+    padding: 0;
+}
 
   .cta {
     background-color: $brand-red;
     margin: 1rem auto;
     padding: 2rem;
-    width: 80%;
+    width: 15%;
   }
 
   button.btn-primary {
@@ -228,16 +239,25 @@ body {
   }
 
   @media only screen and (min-width: 769px) and (max-width: 1024px) {
+
+    .container-fluid {
+      margin: 6rem auto 0;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .Foto {
+      width: 100% !important;
+
+  }
+
     .Premios,
     .fecha {
       transform: none;
       margin: 0 1rem;
+      width:100%
     }
 
-    .Foto {
-      margin: 1rem auto;
-      width: 80%;
-    }
 
     .cta {
       width: 60%;
@@ -246,14 +266,19 @@ body {
 
   @media only screen and (max-width: 768px) and (orientation: portrait) {
     .container-fluid {
-      max-width: 86%;
-      margin-top: 2rem;
+      margin: 6rem auto 0;
+      display: flex;
+      flex-direction: column;
     }
 
     .fecha {
-      margin-left: -30px;
+      margin-left: 0px;
       transform: none;
     }
+    .Foto {
+      width: 100% !important;
+
+  }
 
     .titulo {
       margin: 0 auto 1rem;
@@ -262,6 +287,7 @@ body {
     .Premios {
       margin: 1rem 0;
       transform: none;
+      width: 100%;
     }
 
     .cta {
@@ -278,4 +304,5 @@ body {
       margin: 1rem auto;
     }
   }
+
 }
