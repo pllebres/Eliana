@@ -35,6 +35,11 @@ ul {
   padding-left: 1rem;
 }
 
+li.nav-item {
+  padding: 1rem;
+}
+
+
 /* Estilos de la página  Blog */
 .Blog,
 .Blog__row,
@@ -68,12 +73,18 @@ ul {
   .item {
     width: 50%;
   }
+
 }
 
 @media screen and (width <= 420px) {
   .item {
     width: 100%;
   }
+  .item img {
+    max-width: 320px;
+}
+
+
 }
 
 /* Estilos de botones */
@@ -148,6 +159,9 @@ button.btn-primary {
   .footer__container {
     padding: 2rem 0;
   }
+  .footer ul.navbar-nav {
+    display: block !important;
+  }
 }
 
 .form {
@@ -188,9 +202,11 @@ footer.footer.bg-black.text-white {
   flex-direction: row;
 }
 
-li.nav-item {
-  padding-right: 3rem;
+ul.footer__social {
+ padding-left: 0rem;
 }
+
+
 
 /* Otros estilos */
 .heading {

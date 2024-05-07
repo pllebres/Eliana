@@ -174,3 +174,104 @@ body {
 
 
 }
+
+
+
+
+
+@supports not (display: grid) {
+  .container-fluid {
+    max-width: 1380px;
+    margin: 6rem auto 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .fecha {
+    background-color: $brand-70black;
+    transform: rotate(-90deg);
+    margin: 1rem 0 0 auto;
+  }
+
+  .titulo {
+    color: $brand-white;
+    margin: 0 auto 1rem;
+  }
+
+  .Foto {
+    width: 100%;
+    margin: 1rem auto;
+  }
+
+  .Premios {
+    transform: rotate(-90deg);
+    margin: auto 0 0 1rem;
+  }
+
+  .cta {
+    background-color: $brand-red;
+    margin: 1rem auto;
+    padding: 2rem;
+    width: 80%;
+  }
+
+  button.btn-primary {
+    align-self: center;
+  }
+
+  .Premios ul {
+    list-style-type: none;
+  }
+
+  @media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .Premios,
+    .fecha {
+      transform: none;
+      margin: 0 1rem;
+    }
+
+    .Foto {
+      margin: 1rem auto;
+      width: 80%;
+    }
+
+    .cta {
+      width: 60%;
+    }
+  }
+
+  @media only screen and (max-width: 768px) and (orientation: portrait) {
+    .container-fluid {
+      max-width: 86%;
+      margin-top: 2rem;
+    }
+
+    .fecha {
+      margin-left: -30px;
+      transform: none;
+    }
+
+    .titulo {
+      margin: 0 auto 1rem;
+    }
+
+    .Premios {
+      margin: 1rem 0;
+      transform: none;
+    }
+
+    .cta {
+      width: 80%;
+      margin: 1rem auto;
+    }
+
+    button.btn-primary {
+      align-self: center;
+    }
+
+    .Foto {
+      width: 100%;
+      margin: 1rem auto;
+    }
+  }
+}
