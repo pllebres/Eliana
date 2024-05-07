@@ -187,6 +187,10 @@ body {
     flex-direction: column;
   }
 
+  .Foto__2 img {
+    width: 300px;
+}
+
   .fecha {
     background-color: $brand-70black;
     transform: rotate(-90deg);
